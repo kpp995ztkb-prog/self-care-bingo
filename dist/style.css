@@ -10,3 +10,4 @@
 
 /* Offset the two artwork lines into one compact title composition. */
 .plan-heading{position:relative}.care-tag{width:350px;max-width:100%;position:relative;margin:0 auto}.self-love-word{width:280px;max-width:80%;margin:0 auto 0 0}.plan-heading h1{width:350px;max-width:100%;margin:-3px auto 0}.bingo-word{width:250px;max-width:74%;margin:0 0 0 auto;transform:none}.heading-star{top:3px}.star-left{left:-38px}.star-right{right:-28px;top:43px}@media(max-width:700px){.care-tag,.plan-heading h1{width:300px}.self-love-word{width:238px}.plan-heading h1{margin-top:-2px}.bingo-word{width:218px}.heading-star{font-size:28px}.star-left{left:-13px;top:13px}.star-right{right:-9px;top:49px;font-size:24px}}
+.plan-heading h1{margin-top:-20px}@media(max-width:700px){.plan-heading h1{margin-top:-17px}}
