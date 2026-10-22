@@ -5,3 +5,5 @@
 
 /* A fine pink outline replaces the filled paper cards. */
 .cell,.card-slot:nth-child(even)>.cell,.card-slot:nth-child(3n)>.cell,.cell.done,.is-editing .cell.done,.is-editing .card-slot:nth-child(even)>.cell.done{background:transparent!important;border:1.25px solid #d6a6b9;box-shadow:none}.cell:before{display:none}.cell:hover{box-shadow:none;border-color:#bf809c}.cell.done{border:2px solid #b56c8b;box-shadow:none}.picker-card.cell,.picker-card.cell:nth-child(even),.picker-card.cell:nth-child(3n),.drag-ghost.cell{background:var(--paper) url('assets/paper.jpg') repeat!important;box-shadow:0 9px 23px #a06b8212}.picker-card.cell:hover{box-shadow:0 9px 23px #a06b8218}.empty-cell{border-style:dashed}.bingo-word{mix-blend-mode:normal}
+
+.care-tag{display:block;line-height:0;margin:0 auto 0;letter-spacing:0}.self-love-word{display:block;width:190px;height:auto;margin:0 auto}.plan-heading h1{margin-top:-3px}@media(max-width:700px){.self-love-word{width:154px}.plan-heading h1{margin-top:-1px}}
