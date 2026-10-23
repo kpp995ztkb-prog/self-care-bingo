@@ -40,3 +40,5 @@ body:not(.is-editing) #grid .cell.done {background:#eee3c9!important}
 
 /* Shared guide styling across desktop and mobile. */
 #modeGuide{color:#452B0D;font-size:13px;font-weight:500;border-color:#8A6248}
+
+#shuffle,#edit{font-size:14px;font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace}
