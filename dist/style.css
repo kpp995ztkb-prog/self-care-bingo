@@ -37,3 +37,6 @@ body:not(.is-editing) #grid .cell.done {background:#eee3c9!important}
 @keyframes fabric-burst {0%{opacity:0;transform:translate(0,30px) rotate(0) scale(.5)}10%{opacity:1}65%{opacity:1;transform:translate(calc(var(--x)*-1),var(--y)) rotate(var(--spin)) scale(1)}100%{opacity:0;transform:translate(calc(var(--x)*-1.15),calc(var(--y) + 160px)) rotate(calc(var(--spin) + 80deg)) scale(.8)}}
 .bonus-preview-trigger {display:block;margin:18px auto 36px;padding:10px 20px;border:1px dashed #b77c94;border-radius:24px;background:#fff9ed;color:#98647b;font:inherit;font-size:12px}
 @media(prefers-reduced-motion:reduce){.party-bit{animation-duration:.01ms}}
+
+/* Shared guide styling across desktop and mobile. */
+#modeGuide{color:#452B0D;font-size:13px;font-weight:500;border-color:#8A6248}
