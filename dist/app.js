@@ -50,7 +50,7 @@ snapshot.forEach((card,i)=>{if(!card)return;const x=105+i%3*540,y=615+Math.floor
 const words=['今天','也要','好好','爱自己'];ctx.font='40px "Noto Serif SC",serif';words.forEach((word,i)=>{ctx.save();ctx.translate(560+i*225,2300);ctx.rotate((i%2?1:-1)*.035);ctx.fillStyle='#b4a096';ctx.fillRect(-83,-40,172,77);ctx.fillStyle=i%2?'#edb6cc':'#f6d1df';ctx.fillRect(-88,-46,172,77);ctx.strokeStyle='#b47a91';ctx.lineWidth=1.5;ctx.strokeRect(-88,-46,172,77);ctx.fillStyle='#654758';ctx.fillText(word,-2,7);ctx.restore()});ctx.drawImage(laceBottom,0,2347,1800,93);return c}
 
 $('#download').onclick=async()=>{const btn=$('#download');btn.disabled=true;btn.textContent='正在制作图片…';try{const c=await createCardCanvas();const blob=await new Promise(resolve=>c.toBlob(resolve,'image/png'));if(!blob)throw Error('export');const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='好好爱自己-Bingo.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);toast('卡片已生成，愿你把温柔带在身边 ♡')}catch{toast('图片生成失败，请再试一次')}finally{btn.disabled=false;btn.textContent='↓ 下载我的卡片'}};
-render();animateEntrance();if(shared){save();history.replaceState(null,'',location.pathname+location.search);setTimeout(()=>toast('收到一份小小关爱，开始你的专属打卡吧 ♡'),500)}
+render();if(shared){save();history.replaceState(null,'',location.pathname+location.search);setTimeout(()=>toast('收到一份小小关爱，开始你的专属打卡吧 ♡'),500)}
 
 function addIllustration(button,card){
  const index=Math.max(0,defaults.findIndex(c=>c[1]===card[1]&&c[2]===card[2]));

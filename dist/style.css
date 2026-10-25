@@ -42,3 +42,33 @@ body:not(.is-editing) #grid .cell.done {background:#eee3c9!important}
 #modeGuide{color:#452B0D;font-size:13px;font-weight:500;border-color:#8A6248}
 
 #shuffle,#edit{font-size:14px;font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace}
+
+/* Landing preview: compact foreground with a small, textured heart. */
+body.showing-intro{background:#fffdfb;overflow-x:hidden}
+body.showing-intro:before,body.showing-intro:after{display:none}
+.welcome{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;position:relative;padding:34px 20px;background:#fffdfb url('assets/paper.jpg') repeat;background-blend-mode:screen;isolation:isolate}
+.welcome:before{content:'';position:absolute;inset:0;border:12px solid #f9d0df;pointer-events:none}
+.welcome-scene{position:relative;width:600px;max-width:100%;min-height:650px;display:flex;align-items:center;justify-content:center}
+.welcome-heart{position:absolute;left:50%;top:50%;width:470px;height:570px;max-width:95%;object-fit:contain;transform:translate(-50%,-50%) rotate(-4deg);animation:welcome-art 700ms ease-out both;pointer-events:none;opacity:.9}
+.welcome-content{position:relative;width:340px;max-width:86%;text-align:center;margin-top:5px}
+.welcome-panel{position:relative;padding:30px 20px 27px;background:rgba(252,232,237,.86);border:2px solid #fff;border-radius:29px;box-shadow:0 8px 24px rgba(159,87,112,.07),inset 0 0 30px rgba(255,255,255,.35);animation:welcome-foreground 600ms 150ms cubic-bezier(.2,.8,.2,1) both;color:#4e2c1b}
+.welcome-panel h1{margin:0;font-weight:700;line-height:1.06;letter-spacing:-1px}
+.welcome-chinese{display:block;font-family:'Kaiti SC','STKaiti','Songti SC',serif;font-size:44px;margin-bottom:2px;letter-spacing:3px}
+.welcome-english{display:block;font-family:Georgia,'Times New Roman',serif;font-size:46px;font-weight:700;letter-spacing:-2px}
+.welcome-panel p{font:15px/1.7 'PingFang SC',sans-serif;letter-spacing:1px;margin:21px 0 0;color:#674630}
+.welcome-doodle{position:absolute;left:19px;top:45px;color:#e998b4;font-family:Georgia,serif;font-size:36px;transform:rotate(-21deg);line-height:1}
+.welcome-spark{position:absolute;right:12px;bottom:59px;font-family:Georgia,serif;font-size:33px;color:#e998b4;transform:rotate(13deg)}
+.welcome-start{display:block;width:88%;margin:31px auto 0;padding:17px 12px;border:0;border-radius:40px;background:#583522;color:#fffaf4;font:500 16px/1.4 'PingFang SC',sans-serif;letter-spacing:1px;box-shadow:0 5px 12px #79452f12;animation:welcome-foreground 600ms 300ms cubic-bezier(.2,.8,.2,1) both;transition:transform .25s,background .25s}
+.welcome-start span{display:inline-block;margin-left:8px;font-size:18px;font-weight:400}.welcome-start:hover{background:#704931;transform:translateY(-2px)}.welcome-start:active{transform:scale(.97)}
+.welcome-back{display:block;margin:0 0 10px;padding:6px 0;background:none;border:0;color:#9c6b80;font:12px 'PingFang SC',sans-serif}
+.welcome.leaving .welcome-panel{animation:welcome-panel-out 300ms ease-in both}
+.welcome.leaving .welcome-start{animation:welcome-button-out 260ms 40ms ease-in both}
+.welcome.leaving .welcome-heart{animation:welcome-art-out 520ms 120ms cubic-bezier(.5,0,.6,1) both}
+@keyframes welcome-foreground{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes welcome-art{from{opacity:0;transform:translate(-50%,-50%) rotate(-4deg) scale(1.05)}to{opacity:.9;transform:translate(-50%,-50%) rotate(-4deg) scale(1)}}
+@keyframes welcome-panel-out{to{opacity:0;transform:translateY(-18px) scale(.97)}}
+@keyframes welcome-button-out{to{opacity:0;transform:translateY(12px) scale(.96)}}
+@keyframes welcome-art-out{from{opacity:.9;transform:translate(-50%,-50%) rotate(-4deg) scale(1)}to{opacity:0;transform:translate(-50%,-50%) rotate(-4deg) scale(1.08)}}
+@media(max-width:600px){.welcome{padding:28px 17px}.welcome:before{border-width:8px}.welcome-scene{min-height:570px;width:100%}.welcome-heart{width:340px;height:430px;max-width:100%}.welcome-content{width:276px;max-width:84%;margin-top:0}.welcome-panel{padding:26px 14px 23px;border-radius:25px}.welcome-chinese{font-size:36px;letter-spacing:2px}.welcome-english{font-size:37px;letter-spacing:-1.5px}.welcome-panel p{font-size:13px;margin-top:17px;letter-spacing:.6px}.welcome-start{margin-top:27px;padding:15px 9px;font-size:14px}.welcome-doodle{font-size:27px;left:13px;top:37px}.welcome-spark{font-size:27px;right:9px;bottom:50px}}
+@media(max-height:620px){.welcome-scene{min-height:470px}.welcome-heart{height:410px}}
+@media(prefers-reduced-motion:reduce){.welcome *{animation:none!important;transition:none!important}}
