@@ -1,9 +1,10 @@
 const welcome=document.getElementById('welcome'),planMain=document.getElementById('planMain'),welcomeStart=document.getElementById('welcomeStart');
 let entering=false;
 function showWelcome(){welcome.hidden=false;planMain.hidden=true;document.body.classList.add('showing-intro');welcome.classList.remove('leaving');welcomeStart.disabled=false;entering=false;window.scrollTo(0,0)}
-async function enterBoard(){if(entering)return;entering=true;welcomeStart.disabled=true;welcome.classList.add('leaving');await new Promise(resolve=>setTimeout(resolve,reduceMotion()?0:650));welcome.hidden=true;planMain.hidden=false;document.body.classList.remove('showing-intro');window.scrollTo(0,0);scheduleFit();await animateEntrance();document.getElementById('edit').focus({preventScroll:true});entering=false}
+async function enterBoard(){if(entering)return;entering=true;editing=true;save();render();welcomeStart.disabled=true;welcome.classList.add('leaving');await new Promise(resolve=>setTimeout(resolve,reduceMotion()?0:650));welcome.hidden=true;planMain.hidden=false;document.body.classList.remove('showing-intro');window.scrollTo(0,0);scheduleFit();await animateEntrance();document.getElementById('edit').focus({preventScroll:true});entering=false}
 welcomeStart.addEventListener('click',enterBoard);
-if(shared){welcome.hidden=true;planMain.hidden=false;document.body.classList.remove('showing-intro');animateEntrance()}
+function resumeBoard(){welcome.hidden=true;planMain.hidden=false;document.body.classList.remove('showing-intro');scheduleFit();animateEntrance()}
+if(hasSavedState)resumeBoard();
 
 var fitFrame=0;
 function scheduleFit(){if(fitFrame)cancelAnimationFrame(fitFrame);fitFrame=requestAnimationFrame(fitMobileBoard)}
