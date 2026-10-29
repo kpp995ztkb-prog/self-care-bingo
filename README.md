@@ -4,11 +4,18 @@
 
 挑选九件关爱自己的小事，完成一件就盖上一颗星星，三格连线收获小礼花。
 
-## 在线体验
+[![在线体验 · 爱自己 Bingo](https://raw.githubusercontent.com/kpp995ztkb-prog/self-care-bingo/main/docs/images/try-now.svg)](https://kpp995ztkb-prog.github.io/self-care-bingo/)
 
-### [点击开始游戏 →](https://kpp995ztkb-prog.github.io/self-care-bingo/)
+## 效果预览
 
-手机、平板和电脑都可以通过浏览器直接打开，无需下载项目、安装依赖或启动本地服务。
+<p>
+  <a href="https://kpp995ztkb-prog.github.io/self-care-bingo/"><img src="https://raw.githubusercontent.com/kpp995ztkb-prog/self-care-bingo/main/docs/images/home-preview.png" width="300" alt="爱自己 Bingo 首页预览，点击在线体验"></a>
+  <a href="https://kpp995ztkb-prog.github.io/self-care-bingo/"><img src="https://raw.githubusercontent.com/kpp995ztkb-prog/self-care-bingo/main/docs/images/board-preview.png" width="300" alt="自我关爱九宫格与星星盖章效果，点击在线体验"></a>
+</p>
+
+*首页与九宫格的真实手机布局截图。点击上方按钮或预览图即可开始游戏。*
+
+手机、平板和电脑都可以直接打开，无需安装或运行本地服务。
 
 [![Publish to GitHub Pages](https://github.com/kpp995ztkb-prog/self-care-bingo/actions/workflows/pages.yml/badge.svg)](https://github.com/kpp995ztkb-prog/self-care-bingo/actions/workflows/pages.yml)
 
