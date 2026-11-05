@@ -83,3 +83,14 @@ body.showing-intro:before,body.showing-intro:after{display:none}
 }
 
 @media(max-width:700px){.plan-main{padding-bottom:32px;padding-bottom:calc(32px + var(--safe-area-inset-bottom,env(safe-area-inset-bottom,0px)))}}
+
+.language-toggle{position:fixed;top:12px;right:14px;z-index:100;border:1px solid #d5a6b8;border-radius:18px;background:#fff9f2;color:#89566e;padding:7px 12px;font:13px sans-serif}.art-heading{margin:10px 0 5px}.art-choices{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;max-height:190px;overflow:auto}.art-choice{position:relative;aspect-ratio:1;border:2px solid transparent;border-radius:8px;padding:0;overflow:hidden;background:#f4d4df}.art-choice.selected{border-color:#a94970}.art-choice img{width:100%;height:100%;object-fit:contain}.art-choice img.sprite{position:absolute;max-width:none;object-fit:fill}.custom-card>.label,#grid .custom-card>.label,.picker-card.custom-card>.label{visibility:visible;position:absolute;left:0;bottom:0;width:100%;height:42%;padding:3px 5px;background:#fbf5e9;display:flex;align-items:center;justify-content:center;font-size:clamp(8px,2vw,12px);line-height:1.15;overflow-wrap:anywhere;overflow:hidden}
+
+/* Custom text sits below the illustration, outside its visible area. */
+.custom-card>.illustrated-art{bottom:32%}.custom-card>.label,#grid .custom-card>.label,.picker-card.custom-card>.label{height:32%;background:var(--card-background,#f5d8d3)}
+
+.custom-card>.illustrated-art{border-radius:7% 7% 0 0}.custom-card>.label,#grid .custom-card>.label,.picker-card.custom-card>.label{font-size:clamp(9px,2vw,14px)}
+
+.custom-card>.illustrated-art{bottom:calc(100% - var(--art-height,68%))}.custom-card>.label,#grid .custom-card>.label,.picker-card.custom-card>.label{height:calc(100% - var(--art-height,68%))}
+
+.picker-card.cell.custom-card > .label{max-width:none}
