@@ -119,3 +119,6 @@ body.showing-intro:before,body.showing-intro:after{display:none}
 
 /* Fixed preview dimensions and explicit edges for older mobile WebViews. */
 .photo-preview{width:200px;max-width:100%;height:200px}.photo-card .photo-image{top:0;right:0;bottom:0;left:0}
+
+/* Keep play actions together and scale them with the board. */
+@media(max-width:700px){body:not(.is-editing) .board-section{text-align:center}body:not(.is-editing) .plan-buttons,body:not(.is-editing) .actions{display:inline-flex;vertical-align:top;width:calc(50% - 8px);max-width:var(--action-width,180px);margin-top:14px}body:not(.is-editing) .plan-buttons{margin-right:4px}body:not(.is-editing) .actions{margin-left:4px}body:not(.is-editing) .plan-buttons>button,body:not(.is-editing) .actions>button{width:100%;min-width:0;font-size:12px;padding-left:6px;padding-right:6px}body:not(.is-editing) .plan-buttons>*+*{margin-left:0}#grid .photo-card>.label{font-size:10px;line-height:1.2}}

@@ -32,7 +32,7 @@
 
 ## 小红书小工具版
 
-[下载小红书上传 ZIP](downloads/self-care-bingo-minitool-20261106.zip)
+[下载小红书上传 ZIP](downloads/self-care-bingo-minitool-20261106-layout.zip)
 
 `minitool/` 是独立适配的离线容器版本，图片通过平台相册接口保存，优先使用平台 Storage。ZIP 内的 `index.html` 位于根目录。静态检查已完成，上传创服平台后仍需完成平台模拟器及 Android、iOS 真机验证；普通浏览器运行不能代替容器验收。
 
